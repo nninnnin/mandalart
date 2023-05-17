@@ -1,3 +1,5 @@
+const path = require("node:path");
+
 module.exports = {
   entry: "./index.js",
   output: {
@@ -6,14 +8,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "/"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
         test: /.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-react"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-react"],
+            },
           },
-        },
+        ],
       },
       {
         test: /.(ts|tsx)$/,

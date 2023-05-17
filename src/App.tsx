@@ -2,7 +2,7 @@ import React from "react";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-red-200">
       나는 앱입니다ggggg
       <br />
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum mollitia
