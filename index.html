@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row {
+        flex: 1;
+
+        background-color: honeydew;
+        padding: 1em;
+
+        display: flex;
+      }
+
+      .col {
+        flex: 1;
+        background-color: pink;
+
+        text-align: center;
+        padding: 2em;
+      }
+
+      .row > .col:first-child {
+        margin-right: 1em;
+      }
+
+      .row > .col:last-child {
+        margin-left: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <!-- <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div>
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div>
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div> -->
+    </div>
+
+    <script src="/dist/main.js"></script>
+  </body>
+</html>
