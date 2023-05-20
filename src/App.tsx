@@ -1,21 +1,11 @@
 import React from "react";
 
+import Goal from "./components/Goal";
+
 const App = () => {
   return (
     <div className="bg-red-200">
-      나는 앱입니다ggggg
-      <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum mollitia
-      voluptatem possimus tempora optio assumenda autem dicta earum porro a sunt
-      sed saepe soluta non laborum asperiores maiores cupiditate fuga delectus
-      quos molestias, dignissimos natus sapiente facere. Molestias optio quae,
-      iure deserunt ea, delectus rerum fuga hic assumenda ullam eius quis,
-      laboriosam maiores officia. Saepe atque, sunt adipisci dolores accusamus
-      fuga minus earum, blanditiis magni mollitia a. Itaque aspernatur maxime
-      sint cum eos? Aliquam, perspiciatis. Voluptatem, qui voluptate, aliquam
-      nemo consequuntur quidem doloribus ad quasi consequatur aliquid quos
-      commodi sunt! Vero voluptates iste tempore quod unde delectus dolore
-      nesciunt deserunt.
+      <Goal text={"경제적 자유 얻기"} />
     </div>
   );
 };

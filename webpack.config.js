@@ -5,6 +5,9 @@ module.exports = {
   output: {
     filename: "main.js",
   },
+  resolve: {
+    extensions: [".ts", ".js", ".tsx"],
+  },
   module: {
     rules: [
       {
