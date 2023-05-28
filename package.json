@@ -7,6 +7,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-react": "^7.18.6",
+    "@types/react": "^18.2.6",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "electron": "^24.3.0",
@@ -22,11 +23,13 @@
   "description": "Mandalart App for Justin Lee (at first)",
   "main": "main.js",
   "dependencies": {
+    "@emotion/css": "^11.11.0",
     "boolean": "^3.2.0",
     "buffer-crc32": "^0.2.13",
     "cacheable-lookup": "^5.0.4",
     "cacheable-request": "^7.0.2",
     "clone-response": "^1.0.3",
+    "clsx": "^1.2.1",
     "debug": "^4.3.4",
     "decompress-response": "^6.0.0",
     "defer-to-connect": "^2.0.1",
