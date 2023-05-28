@@ -1,7 +1,12 @@
-export function mapSubgoalPositions(subGoals, mainGoalDOM: HTMLDivElement) {
+import { Goal } from "../models";
+
+export function mapSubgoalPositions(
+  subGoals: Array<Goal>,
+  mainGoalDOM: HTMLDivElement
+) {
   const { width, x, y } = mainGoalDOM?.getBoundingClientRect();
 
-  return subGoals.map((goal, index, arr) => {
+  return subGoals.map(({ id, goal }, index, arr) => {
     const angle = degToRad(360 / arr.length) * index;
     const radius = width;
 
@@ -11,7 +16,8 @@ export function mapSubgoalPositions(subGoals, mainGoalDOM: HTMLDivElement) {
     ];
 
     return {
-      text: goal,
+      id,
+      goal,
       pos: {
         top: `${y1}px`,
         left: `${x1}px`,

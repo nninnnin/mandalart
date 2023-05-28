@@ -2,6 +2,7 @@ import { useState } from "react";
 import { clsx } from "clsx";
 import { css } from "@emotion/css";
 import SubGoals from "./SubGoals";
+import { Goal } from "../models";
 
 const Goal = ({
   text,
@@ -9,7 +10,7 @@ const Goal = ({
   pos,
 }: {
   text: string;
-  subGoals?: Array<string>;
+  subGoals?: Array<Goal>;
   pos?: {
     top: string;
     left: string;

@@ -1,8 +1,9 @@
 import { mapSubgoalPositions } from "../utils";
 import Goal from "./Goal";
+import { Goal as GoalInterface } from "../models/index";
 
 interface Props {
-  subGoals: Array<string>;
+  subGoals: Array<GoalInterface>;
   mainGoalRef: HTMLDivElement;
 }
 
@@ -11,8 +12,8 @@ const SubGoals = ({ subGoals, mainGoalRef }: Props) => {
 
   return (
     <div>
-      {mapSubgoalPositions(subGoals, mainGoalRef).map(({ text, pos }) => {
-        return <Goal text={text} pos={pos} />;
+      {mapSubgoalPositions(subGoals, mainGoalRef).map(({ id, goal, pos }) => {
+        return <Goal key={id} text={goal} pos={pos} />;
       })}
     </div>
   );
