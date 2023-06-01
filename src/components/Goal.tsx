@@ -20,8 +20,6 @@ const Goal = ({
 
   const hasPosition = !!pos;
 
-  const containerStyles =
-    "w-[150px] h-[150px] fixed grid place-items-center shadow-inner rounded-full shadow-indigo-200";
   const centeredPosition =
     "top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]";
 
@@ -34,7 +32,7 @@ const Goal = ({
     <div>
       <div
         className={clsx(
-          containerStyles,
+          "w-[150px] h-[150px] fixed grid place-items-center rounded-full bg-red-400 text-white break-keep text-center text-sm",
           hasPosition ? newPosition : centeredPosition
         )}
         ref={(ref) => setContainerRef(ref)}
