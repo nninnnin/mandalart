@@ -14,6 +14,18 @@ const App = () => {
   return (
     <div className="w-[100vw] h-[100vh]">
       <Goal text={"작은 크리에이터 되기"} subGoals={subGoals} />
+      <Goal
+        text={"몸짱 되기"}
+        subGoals={[
+          { id: uuid(), goal: "팔굽혀펴기 100개" },
+          { id: uuid(), goal: "윗몸일으키기 50개" },
+          { id: uuid(), goal: "턱걸이 200개" },
+        ]}
+        pos={{
+          top: "18%",
+          left: "18%",
+        }}
+      />
     </div>
   );
 };
